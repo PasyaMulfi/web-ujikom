@@ -1,15 +1,17 @@
 <template>
-  <!-- <header>
-    <div>
-      <nav>
-      </nav>
-    </div>
-  </header> -->
-  <router-view />
+  <header>
+    <Navbar /> <!-- Menambahkan komponen Navbar -->
+  </header>
+  <router-view /> <!-- Menampilkan konten halaman -->
+  <footer>
+    <Footer /> <!-- Menambahkan komponen Footer -->
+  </footer>
 </template>
 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import Navbar from './components/Navbar.vue'; 
+import Footer from './components/Footer.vue'; 
 </script>
 
 <style scoped>
@@ -19,7 +21,8 @@ import { RouterLink, RouterView } from 'vue-router'
 <script>
 export default {
   components: {
-    //dashboard
+    Navbar,
+    Footer 
   }
 }
 </script>
